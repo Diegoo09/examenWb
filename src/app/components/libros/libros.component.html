@@ -1,0 +1,12 @@
+<div id="body">
+<ul id="libros">
+    <li *ngFor="let item of ListaL; let i=index" >
+
+
+        <p>{{item.nombre}}</p>
+        <img src="/assets/{{item.imagen}}" >  
+        <p>{{item.autor}}</p>
+        <p> {{item.paginas}} </p>
+    </li>
+</ul>
+</div>

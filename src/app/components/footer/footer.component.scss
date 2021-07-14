@@ -1,0 +1,16 @@
+footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li{
+    border: 1px solid black ;
+    width: 90%;
+    text-align: center;
+}
+
+footer{
+    padding-top: 25px;
+    padding-bottom: 20px;
+}

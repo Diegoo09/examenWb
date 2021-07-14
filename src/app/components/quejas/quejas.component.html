@@ -1,0 +1,32 @@
+<div id="contenedor">
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div id="formular">
+            <div id="campos">
+                <label for="nombre">nombre:</label>
+                <input type="text" class="form-control" formControlName="nombre"
+                [ngClass]="{ 'is-invalid': submitted &&f.nombre.errors }">
+                <div *ngIf="submitted && f.nombre.errors" class="invalido">
+                    <div *ngIf="f.nombre.errors.required">campo requerido</div>
+                    <div *ngIf="f.nombre.errors.maxlength">maximo 30 caracteres</div>
+                    <div *ngIf="f.nombre.errors.minlength">minimo 5 caracteres</div>
+                </div>
+                
+
+                <label for="observacion">Observacion:</label>
+                <textarea class="form-control" rows="3" formControlName="observacion"
+                [ngClass]="{ 'is-invalid': submitted &&f.observacion.errors }"></textarea>
+                <div *ngIf="submitted && f.observacion.errors" class="invalido">
+                    <div *ngIf="f.observacion.errors.required">campo requerido</div>
+                </div>
+
+            </div>
+
+            <div id="boton">
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
